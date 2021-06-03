@@ -1,0 +1,16 @@
+// from data.js
+var tableData = data;
+
+// YOUR CODE HERE!
+//select table and body elements
+var table = d3.select(".table")
+var tbody = d3.select("tbody")
+
+//print each data element
+data.forEach(function(UFOsiting) {
+    var row = tbody.append("tr")
+    Object.entries(UFOsiting).forEach(function([key, value]) {
+        var dataElement = row.append("td")
+        dataElement.text(value)
+      });
+    });
